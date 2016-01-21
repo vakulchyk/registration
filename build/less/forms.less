@@ -1,0 +1,132 @@
+/*
+ * Component: Form
+ * ---------------
+ */
+.form-control {
+  .border-radius(@input-radius);
+  box-shadow: none;
+  border-color: @gray;
+  &:focus {
+    border-color: @light-blue;
+    box-shadow: none;
+  }
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::-webkit-input-placeholder {
+    color: #555;
+    opacity: 1;
+  }
+
+  &:not(select) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+.form-group {
+  &.has-success {
+    label {
+      color: @green;
+    }
+    .form-control {
+      border-color: @green;
+      box-shadow: none;
+    }
+  }
+
+  &.has-warning {
+    label {
+      color: @yellow;
+    }
+    .form-control {
+      border-color: @yellow;
+      box-shadow: none;
+    }
+  }
+
+  &.has-error {
+    label {
+      color: @red;
+    }
+    .form-control {
+      border-color: @red;
+      box-shadow: none;
+    }
+  }
+}
+
+/* Input group */
+.input-group {
+  .input-group-addon {
+    .border-radius(@input-radius);
+    border-color: @gray;
+    background-color: #fff;
+  }
+}
+/* button groups */
+.btn-group-vertical {
+  .btn {
+    &.btn-flat:first-of-type, &.btn-flat:last-of-type {
+      .border-radius(0);
+    }
+  }
+}
+
+.icheck > label {
+  padding-left: 0;
+}
+
+/* support Font Awesome icons in form-control */
+.form-control-feedback.fa {
+    line-height: @input-height-base;
+}
+
+.input-lg + .form-control-feedback.fa,
+.input-group-lg + .form-control-feedback.fa,
+.form-group-lg .form-control + .form-control-feedback.fa {
+  line-height: @input-height-large;
+}
+.input-sm + .form-control-feedback.fa,
+.input-group-sm + .form-control-feedback.fa,
+.form-group-sm .form-control + .form-control-feedback.fa {
+  line-height: @input-height-small;
+}
+
+//Styles for error messages
+#error-terms {
+    margin-bottom: -10px;
+    display: none;
+}
+#error-f-name, 
+#error-l-name,
+#error1-email,
+#error2-email,
+#error3-email,
+#warning-pswd,
+#error-pswd,
+#error2-pswd,
+#error-retype-pswd,
+#error-organization,
+#error-entity-type{
+   margin-bottom: 0px;
+   display: none;
+}
+.dropdown-menu>li {
+  padding-left: 10px;
+}
+.form-group.has-error label,
+.form-group.has-warning label 
+{
+  font-weight: 500;
+}
+.normal-font-size {
+  font-weight: normal;
+}
+//eye-icon for showing pswd 
+.form-control-feedback.show-pointer {
+    pointer-events: visible;
+}
+.show-pointer:hover {
+    cursor: pointer;
+}
